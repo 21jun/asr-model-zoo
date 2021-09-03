@@ -1,0 +1,13 @@
+CUDA_VISIBLE_DEVICES=0 python run_asr.py \
+--output_dir="out/output_v1" \
+--num_train_epochs="50" \
+--per_device_train_batch_size="1" \
+--per_device_eval_batch_size="1" \
+--evaluation_strategy="steps" \
+--save_steps="50" \
+--eval_steps="1000000000000" \
+--logging_steps="10" \
+--learning_rate="3e-4" \
+--warmup_steps="3000" \
+--save_total_limit="3" \
+--seed=42
